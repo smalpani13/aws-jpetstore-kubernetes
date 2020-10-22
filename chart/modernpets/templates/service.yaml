@@ -3,10 +3,6 @@ kind: Service
 metadata:
   labels:
     app: jpetstoreweb
-    chart: {{ .Chart.Name }}-{{ .Chart.Version }}
-    release: {{ .Release.Name }}
-    heritage: {{ .Release.Service }}
-
   name: jpetstore
 spec:
   type: LoadBalancer  # use LoadBalancer as type here
@@ -14,5 +10,4 @@ spec:
     - port: 9080
   selector:
     app: jpetstoreweb
-    release: {{ .Release.Name }}
 
