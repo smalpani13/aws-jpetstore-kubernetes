@@ -3,7 +3,7 @@ apiVersion: apps/v1
 metadata:
   name: jpetstoreweb
   labels:
-    app: {{ template "name" . }}
+    app: jpetstoreweb
     chart: {{ .Chart.Name }}-{{ .Chart.Version }}
     release: {{ .Release.Name }}
     heritage: {{ .Release.Service }}
