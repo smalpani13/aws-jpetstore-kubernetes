@@ -4,15 +4,11 @@ metadata:
   name: jpetstoreweb
   labels:
     app: jpetstoreweb
-    chart: {{ .Chart.Name }}-{{ .Chart.Version }}
-    release: {{ .Release.Name }}
-    heritage: {{ .Release.Service }}
 spec:
   replicas: 1
   selector:
       matchLabels:
         app: jpetstoreweb
-        release: {{ .Release.Name }}
   template:
     metadata:
       labels:
